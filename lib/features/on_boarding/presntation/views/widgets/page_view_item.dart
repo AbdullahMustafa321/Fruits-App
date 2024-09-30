@@ -27,9 +27,9 @@ final Widget title;
             ],
           ),
         ),
-        SizedBox(height: 64.h,),
+        SizedBox(height: 60.h,),
         title,
-        SizedBox(height: 24.h,),
+        SizedBox(height: 22.h,),
         Padding(
           padding:  EdgeInsets.symmetric(horizontal: 16.w),
           child: Text(subTitle,textAlign:TextAlign.center,style: TextStyle(fontSize: 13.sp,fontFamily: 'Cairo',fontWeight: FontWeight.w600),),

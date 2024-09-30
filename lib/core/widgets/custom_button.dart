@@ -9,9 +9,13 @@ final String text;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: 54.h,
       width: double.infinity,
       child: TextButton(
         style: TextButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16.r)
+          ),
           backgroundColor: AppColors.kPrimaryColor,
         ),
           onPressed: onPressed, child: Text(text,style: TextStyle(color: Colors.white),)),
