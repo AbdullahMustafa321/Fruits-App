@@ -25,6 +25,7 @@ class AppRoot extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
+          locale: Locale('ar'),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: onGenerateRoute,
           initialRoute: SplashView.routeName,
