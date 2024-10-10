@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,14 +12,12 @@ class AppRoot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360,690),
+      designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_,context){
+      builder: (_, context) {
         return MaterialApp(
-          theme: ThemeData(
-            fontFamily: 'Cairo'
-          ),
+          theme: ThemeData(fontFamily: 'Cairo'),
           localizationsDelegates: const [
             S.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -28,11 +25,11 @@ class AppRoot extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: S.delegate.supportedLocales,
-          locale: Locale('ar'),
+          locale: const Locale('ar'),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: onGenerateRoute,
           initialRoute: SplashView.routeName,
-          );
+        );
       },
     );
   }

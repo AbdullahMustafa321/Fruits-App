@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/widgets/custom_button.dart';
-import 'package:fruits_app/features/home/presentation/views/home_view.dart';
+import 'package:fruits_app/features/auth/presentation/views/login_view.dart';
 import 'package:fruits_app/features/on_boarding/presntation/views/widgets/on_boarding_page_view.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -24,9 +24,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     pageController = PageController();
     pageController.addListener(() {
       currentPage = pageController.page!.round();
-      setState(() {
-
-      });
+      setState(() {});
     });
     super.initState();
   }
@@ -50,7 +48,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             dotsCount: 2,
             decorator: DotsDecorator(
                 activeColor: AppColors.kPrimaryColor,
-                color: currentPage==1?AppColors.kPrimaryColor:AppColors.kPrimaryColor.withOpacity(0.5)),
+                color: currentPage == 1
+                    ? AppColors.kPrimaryColor
+                    : AppColors.kPrimaryColor.withOpacity(0.5)),
           ),
           SizedBox(
             height: 29.h,
@@ -65,7 +65,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               child: CustomButton(
                 text: 'ابدأ الان',
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, HomeView.routeName);
+                  Navigator.pushReplacementNamed(context, LoginView.routeName);
                 },
               ),
             ),

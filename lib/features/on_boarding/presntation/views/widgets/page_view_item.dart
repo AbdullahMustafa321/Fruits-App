@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
+import 'package:fruits_app/features/auth/presentation/views/login_view.dart';
 
 class PageViewItem extends StatelessWidget {
   const PageViewItem(
@@ -37,9 +38,14 @@ class PageViewItem extends StatelessWidget {
                   bottom: 0, left: 0, right: 0, child: SvgPicture.asset(image)),
               Visibility(
                 visible: isVisible,
-                child: Padding(
-                  padding: EdgeInsets.all(16.r),
-                  child:  Text('تخط',style: TextStyles.regular13.copyWith(color: Color(0xFF949D9E)),),
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.all(16.r),
+                    child:  Text('تخط',style: TextStyles.regular13.copyWith(color: Color(0xFF949D9E)),),
+                  ),
                 ),
               )
             ],
