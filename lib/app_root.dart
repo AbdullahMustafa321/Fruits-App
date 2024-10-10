@@ -18,6 +18,9 @@ class AppRoot extends StatelessWidget {
       splitScreenMode: true,
       builder: (_,context){
         return MaterialApp(
+          theme: ThemeData(
+            fontFamily: 'Cairo'
+          ),
           localizationsDelegates: const [
             S.delegate,
             GlobalMaterialLocalizations.delegate,
