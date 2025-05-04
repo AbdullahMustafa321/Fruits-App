@@ -2,9 +2,14 @@
 class Assets {
   Assets._();
 
+  static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
   static const String imagesFreepikCircles = 'assets/images/freepik-Circles.svg';
   static const String imagesFreepikPlant = 'assets/images/freepik-Plant.svg';
-  static const String imagesFruitsIcon = 'assets/images/fruits icon.png';
+  static const String imagesFruitBasket = 'assets/images/fruit_basket.svg';
+  static const String imagesFruitsIcon = 'assets/images/fruits_icon.png';
+  static const String imagesOnBoardingViewBackground1 = 'assets/images/on_boarding_view_background1.svg';
+  static const String imagesOnBoardingViewBackground2 = 'assets/images/on_boarding_view_background2.svg';
+  static const String imagesPineapple = 'assets/images/pineapple.svg';
   static const String imagesSplashLogo = 'assets/images/splash-logo.svg';
 
 }
