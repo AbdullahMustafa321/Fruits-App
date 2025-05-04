@@ -16,6 +16,9 @@ class AppRoot extends StatelessWidget {
       designSize:const Size(360, 690),
       builder: (_, context) {
         return  MaterialApp(
+          theme: ThemeData(
+            fontFamily: 'Cairo'
+          ),
           localizationsDelegates: [
             S.delegate,
             GlobalMaterialLocalizations.delegate,

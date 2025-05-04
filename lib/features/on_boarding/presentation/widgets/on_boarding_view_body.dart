@@ -39,7 +39,7 @@ super.dispose();
   Widget build(BuildContext context) {
     return Column(
       children: [
-         Expanded(child: OnBoardingPageView(pageController: pageController,)),
+          Expanded(child: OnBoardingPageView(pageController: pageController,)),
         DotsIndicator(dotsCount: 2,
           decorator:DotsDecorator(
             activeColor: currentPage==0?AppColors.primaryColor:AppColors.primaryColor.withOpacity(.5),
@@ -52,7 +52,7 @@ super.dispose();
           maintainState: true,
           visible: currentPage==1 ? true : false,
           child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+            padding:  const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
             child: CustomButton(text:'ابدأ الان',onPressed: (){},),
           ),
         ),

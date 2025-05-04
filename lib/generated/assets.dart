@@ -2,7 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String fontsCairoBold = 'assets/fonts/Cairo-Bold.ttf';
+  static const String fontsCairoMedium = 'assets/fonts/Cairo-Medium.ttf';
   static const String fontsCairoRegular = 'assets/fonts/Cairo-Regular.ttf';
+  static const String fontsCairoSemiBold = 'assets/fonts/Cairo-SemiBold.ttf';
   static const String imagesFreepikCircles = 'assets/images/freepik-Circles.svg';
   static const String imagesFreepikPlant = 'assets/images/freepik-Plant.svg';
   static const String imagesFruitBasket = 'assets/images/fruit_basket.svg';
