@@ -9,7 +9,7 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.3.4 <4.0.0'
 
-
+#------------------Packages----------------------
 dependencies:
   flutter_localizations:
     sdk: flutter
@@ -19,6 +19,9 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.10+1
   dots_indicator: ^4.0.1
+  shared_preferences: ^2.5.3
+
+#---------------------------------------------------
 
 
 dev_dependencies:

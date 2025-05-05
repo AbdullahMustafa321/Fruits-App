@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
-
+import 'package:fruits_app/features/auth/presentation/views/login_view.dart';
 import '../../../../constants.dart';
+import '../../../../core/services/shared_preferences_singleton.dart';
 import 'custom_button.dart';
 import 'on_boarding_page_view.dart';
 
@@ -53,10 +54,13 @@ super.dispose();
           visible: currentPage==1 ? true : false,
           child: Padding(
             padding:  const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-            child: CustomButton(text:'ابدأ الان',onPressed: (){},),
+            child: CustomButton(text:'ابدأ الان',onPressed: (){
+              Prefs.setBool(kIsBoardingViewSeen, true);
+              Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+            },),
           ),
         ),
-        SizedBox(height: 43.h,)
+        SizedBox(height: 43.h,),
       ],
     );
   }

@@ -2,6 +2,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruits_app/constants.dart';
+import 'package:fruits_app/core/services/shared_preferences_singleton.dart';
+import 'package:fruits_app/features/auth/presentation/views/login_view.dart';
 import 'package:fruits_app/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:fruits_app/generated/assets.dart';
 
@@ -16,7 +19,7 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    excuteNaviaation();
+    excuteNaviagtion();
   }
   @override
   Widget build(BuildContext context) {
@@ -33,9 +36,14 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       ],
     );
   }
-  void excuteNaviaation(){
+  void excuteNaviagtion(){
+      bool isBoardingViewSeen = Prefs.getBool(kIsBoardingViewSeen);
     Future.delayed(const Duration(seconds: 3),(){
-      Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+      if (isBoardingViewSeen) {
+        Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+      }else{
+        Navigator.of(context).pushReplacementNamed(OnBoardingView.routeName);
+      }
     });
   }
 }

@@ -4,7 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../constants.dart';
+import '../../../../core/services/shared_preferences_singleton.dart';
 import '../../../../core/utils/app_text_style.dart';
+import '../../../auth/presentation/views/login_view.dart';
 
 
 class PageViewItem extends StatelessWidget {
@@ -34,9 +37,15 @@ final bool isVisible;
                 visible: isVisible,
                 child: Positioned(
                   top: 10.h,
-                  child: Padding(
-                    padding:  EdgeInsets.all(16.r),
-                    child:  Text('تخط',style: AppTextStyle.regular13.copyWith(color: Color(0xff949d9e)),),
+                  child: GestureDetector(
+                    onTap: (){
+                      Prefs.setBool(kIsBoardingViewSeen, true);
+                      Navigator.of(context).pushReplacementNamed(LoginView.routeName);
+                    },
+                    child: Padding(
+                      padding:  EdgeInsets.all(16.r),
+                      child:  Text('تخط',style: AppTextStyle.regular13.copyWith(color: Color(0xff949d9e)),),
+                    ),
                   ),),
               )
             ],
