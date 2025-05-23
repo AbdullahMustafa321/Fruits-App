@@ -7,7 +7,7 @@ import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/features/auth/presentation/views/login_view.dart';
 import '../../../../constants.dart';
 import '../../../../core/services/shared_preferences_singleton.dart';
-import 'custom_button.dart';
+import '../../../../core/widgets/custom_button.dart';
 import 'on_boarding_page_view.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
