@@ -16,7 +16,6 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.10+1
   dots_indicator: ^4.0.1
   shared_preferences: ^2.5.3

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../constants.dart';
@@ -36,30 +35,30 @@ final bool isVisible;
               Visibility(
                 visible: isVisible,
                 child: Positioned(
-                  top: 10.h,
+                  top: 10,
                   child: GestureDetector(
                     onTap: (){
                       Prefs.setBool(kIsBoardingViewSeen, true);
                       Navigator.of(context).pushReplacementNamed(LoginView.routeName);
                     },
                     child: Padding(
-                      padding:  EdgeInsets.all(16.r),
-                      child:  Text('تخط',style: AppTextStyle.regular13.copyWith(color: Color(0xff949d9e)),),
+                      padding:  const EdgeInsets.all(16),
+                      child:  Text('تخط',style: AppTextStyle.regular13.copyWith(color: const Color(0xff949d9e)),),
                     ),
                   ),),
               )
             ],
           ),
         ),
-         SizedBox(
-          height: 40.h,
+         const SizedBox(
+          height: 40,
         ),
         title,
-        SizedBox(
-          height: 24.h,
+        const SizedBox(
+          height: 24,
         ),
         Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 37.w),
+          padding:  const EdgeInsets.symmetric(horizontal: 37),
           child: Text(
             subTitle,
             textAlign: TextAlign.center,

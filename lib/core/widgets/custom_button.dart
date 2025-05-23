@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 
 import '../utils/app_text_style.dart';
@@ -15,11 +14,11 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 54.h,
+      height: 54,
       child: TextButton(
           style: TextButton.styleFrom(
               backgroundColor: AppColors.primaryColor,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r)
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)
               
               )
           ),

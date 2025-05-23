@@ -2,7 +2,6 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/features/auth/presentation/views/login_view.dart';
 import '../../../../constants.dart';
@@ -46,7 +45,7 @@ super.dispose();
             activeColor: currentPage==0?AppColors.primaryColor:AppColors.primaryColor.withOpacity(.5),
             color: currentPage==1?AppColors.primaryColor:AppColors.primaryColor.withOpacity(.5)
           ),),
-        SizedBox(height: 29.h,),
+        const SizedBox(height: 29,),
         Visibility(
           maintainSize: true,
           maintainAnimation: true,
@@ -60,7 +59,7 @@ super.dispose();
             },),
           ),
         ),
-        SizedBox(height: 43.h,),
+        const SizedBox(height: 43,),
       ],
     );
   }

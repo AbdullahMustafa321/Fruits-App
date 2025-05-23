@@ -12,7 +12,7 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context, text: 'تسجيل دخول'),
-      body: SafeArea(child: LoginViewBody()),
+      body: const SafeArea(child: LoginViewBody()),
     );
   }
 }
